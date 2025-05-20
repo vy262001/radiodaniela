@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imagenes/1ddpng.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Radio Vibra Daniela</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Radio Vibra Daniela</h1>
+    <nav>
+      <img class="logo" src="imagenes/1ddpng.png" alt="Logo" />
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#programacion">Programación</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="player">
+      <h2>Transmisión en Vivo</h2>
+      <div id="visualizador-audio"></div>
+      <audio id="audioPlayer" controls>
+        <source src="" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+
+      <div style="text-align: center; margin-top: 10px;">
+        <button id="boton-radio-en-vivo" class="station_play b-stop" aria-label="En Vivo" title="Radio en vivo"
+                stream="https://playerservices.streamtheworld.com/api/livestream-redirect/MIX_BARRANQUILLAAAC.aac?dist=onlineradiobox"
+                streamtype="mp3" radioid="co.mix" radioimg="//cdn.onlineradiobox.com/img/l/8/23418.v32.png"
+                radioname="Mix Radio">
+          ▶ Escuchar Mix Radio en Vivo
+        </button>
+      </div>
+
+      <div id="lista-canciones">
+        <h3>Mi Lista de Canciones</h3>
+        <ul>
+          <li>
+            <button class="reproducir" data-src="canciones_mp3/cancion1.mp3">
+              🎵 Silvestre Dangond - LA VALLENATA
+            </button>
+          </li>
+          <li>
+            <button class="reproducir" data-src="canciones_mp3/cancion2.mp3">
+              🎵 Grupo Niche - Cali Aji
+            </button>
+          </li>
+          <li>
+            <button class="reproducir" data-src="canciones_mp3/cancion3.mp3">
+              🎵 Jombriel, DFZM - Vitamina
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="programacion">
+      <h2>Programación del Día</h2>
+      <ul>
+        <li>08:00 AM - Buenos días con Daniela</li>
+        <li>10:00 AM - Lo que vibra del amor</li>
+        <li>12:00 PM - Noticias con flow</li>
+        <li>04:00 PM - Tardes musicales</li>
+        <li>08:00 PM - Voces de la noche</li>
+      </ul>
+    </section>
+
+    <section id="podcast">
+      <h2>Episodios Grabados</h2>
+      <ul>
+        <li><a href="#">Cómo empezó Radio Vibra Daniela</a></li>
+        <li><a href="#">Top 10 canciones más sonadas</a></li>
+        <li><a href="#">Entrevista exclusiva: Daniela habla</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form id="formulario-contacto">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+        <p id="respuesta-formulario"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Radio Vibra Daniela. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
